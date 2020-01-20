@@ -1,3 +1,284 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+.frame {
+    margin: 2%;
+}
+
+/* Headings */
+h1 p {
+	font-size: 80px;
+	text-align: center;
+    padding-right: 100px;
+    display: flex;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+header .left {
+    margin: 2.5%;
+}
+
+/* Body paragraphs*/
+p {
+	font-size: 15px;
+}
+
+/* Navigation Styling*/
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    height: 18vh;
+    width: 90%;
+    padding-top: 5%;
+    background-color: white;
+}
+
+nav .toolbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 18vh;
+	width: 77%;
+}
+
+nav a {
+    margin: 2.5 1%;
+	padding: 1%;
+	color: grey;
+    text-decoration: none;
+	display: flex;
+  }
+
+.title a {
+  border: 2px solid black;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 14%;
+  padding-right: 14%;
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+	margin-top: 50px;
+	padding-left: 65px;
+}
+/* Page Structure*/
+
+section {
+	padding: 4%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+.part1 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+    padding-bottom: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+    padding-bottom: 6%;
+    width: 100%;
+}
+
+
+
+.top {
+	  display: flex;
+	  border-top: 2.5px solid black;
+	  margin: 0 8%;
+}
+
+.bottom {
+	display: flex;
+	border-bottom: 2.5px solid black;
+	margin: 0 8%;
+}
+
+/*Image Formatting*/
+.logo img {
+    padding-left: 3%;
+}
+
+.rectangle img {
+    width: 100%;
+    padding: 0 65px;
+    display: flex;
+}
+
+.circle img {
+    text-align: right;
+    display: flex;
+}
+
+
+
+/*Footer Section*/
+footer {
+	margin: 0 8%;
+}
+.copyright {
+	padding: 20px 0;
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+.pe {
+	margin-top: 20px;
+}
+
+#contact {
+	margin-bottom: 5px;
+}
+
+@media (min-width: 501px) {
+	nav {
+		position: fixed;
+	}
+}
+
+@media (max-width: 800px) {
+	nav {
+		display: flex;
+		flex-direction: column-reverse;
+		margin-top: 8%;
+		height: 20vh;
+	}
+	.circle img {
+		display: none;
+	}
+
+	header .left {
+		margin-left: 18%;
+		margin-top: 15%;
+	}
+
+	h1 p {
+		font-size: 75px;
+	}
+
+	h2 {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 500px) {
+	h1 p {
+		font-size: 75px;
+	}
+
+	h2 {
+		font-size: 18px;
+	}
+
+	.circle img {
+		display: none;
+	}
+
+	nav {
+		display: flex;
+		flex-direction: column-reverse;
+		height: 20vh;
+	}
+
+	nav .toolbar {
+		display: flex;
+		flex-direction: column;
+	}
+
+	nav a {
+		border-bottom: 1px solid grey;
+		font-size: 20px;
+		width: 420px;
+		padding-top: 3.5%;
+		padding-bottom: 3.5%;
+		justify-content: center;
+	}
+
+	.top {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.bottom {
+		display: flex;
+		flex-direction: column;
+	}
+}
